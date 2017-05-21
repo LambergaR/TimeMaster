@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "381538573236",
+    "firebase_url": "https://timemaster-91e49.firebaseio.com",
+    "project_id": "timemaster-91e49",
+    "storage_bucket": "timemaster-91e49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381538573236:android:9c48f1c3af7e992e",
+        "android_client_info": {
+          "package_name": "com.sonc.timemaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381538573236-stvqg8ht75sb64mlhc6113on5n0vlvrc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sonc.timemaster",
+            "certificate_hash": "3c602134e5eec704554a80f0d93d276e5f485d81"
+          }
+        },
+        {
+          "client_id": "381538573236-bff3smcgbee39btjj2t5fv159q0h485j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALDesiF4_K5ESFJUdVX2irUgwsdW1v9V0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381538573236-bff3smcgbee39btjj2t5fv159q0h485j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

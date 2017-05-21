@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TimeMaster</string>
+
+    <string name="logout">Logout</string>
+</resources>
