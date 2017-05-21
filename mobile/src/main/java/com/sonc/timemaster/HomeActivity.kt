@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import com.sonc.timemaster.auth.AuthService
+import com.sonc.timemaster.timer.TimerActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -35,12 +36,16 @@ class HomeActivity : AppCompatActivity() {
         var toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        button.setOnClickListener {
+        login_button.setOnClickListener {
             if(authService.user.email == null) {
                 login()
             } else {
                 logout()
             }
+        }
+
+        timer.setOnClickListener {
+            startActivity(Intent(this, TimerActivity::class.java))
         }
     }
 

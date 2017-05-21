@@ -29,6 +29,9 @@
         <!-- LOGIN -->
         <activity android:name=".LoginActivity" />
 
+        <!-- TIMER -->
+        <activity android:name=".timer.TimerActivity" />
+
         <!-- PUSH -->
         <service android:name=".push.TMFirebaseMessagingService">
             <intent-filter>

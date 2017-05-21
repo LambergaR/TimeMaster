@@ -1,2 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <style name="TimerActivity"></style>
+
+    <style name="TimerActivity.Toolbar" parent="Toolbar"></style>
+
+    <style name="TimerActivity.Time">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+
+        <item name="android:textSize">24dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="TimerActivity.Save">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:text">@string/save</item>
+    </style>
+
+    <style name="TimerActivity.Start">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:text">@string/start</item>
+    </style>
+</resources>

@@ -17,9 +17,16 @@
     />
 
     <Button
-        android:id="@+id/button"
-        style="@style/HomeActivity.Button"
+        android:id="@+id/login_button"
+        style="@style/HomeActivity.LoginButton"
 
         android:layout_alignParentBottom="true"
+    />
+
+    <Button
+        android:id="@+id/timer"
+        style="@style/HomeActivity.TimerButton"
+
+        android:layout_above="@id/login_button"
     />
 </RelativeLayout>

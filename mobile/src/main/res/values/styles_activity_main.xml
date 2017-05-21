@@ -10,11 +10,18 @@
     <style name="HomeActivity.Toolbar" parent="Toolbar">
     </style>
 
-    <style name="HomeActivity.Button">
+    <style name="HomeActivity.LoginButton">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
 
-        <item name="android:text">USER</item>
+        <item name="android:text">@string/user</item>
+    </style>
+
+    <style name="HomeActivity.TimerButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:text">@string/new_timer</item>
     </style>
 
 

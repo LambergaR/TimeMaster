@@ -2,4 +2,11 @@
     <string name="app_name">TimeMaster</string>
 
     <string name="logout">Logout</string>
+    <string name="user">user</string>
+
+    <string name="new_timer">new timer</string>
+
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="save">Save</string>
 </resources>
