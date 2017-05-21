@@ -15,6 +15,7 @@ import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.firebase.auth.*
 import com.sonc.timemaster.auth.AuthService
+import com.sonc.timemaster.timer.TimerMigrationService
 import timber.log.Timber
 
 /**
@@ -92,10 +93,13 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     }
 
     @SuppressLint("WrongConstant")
-    fun signInAsNewUser(credential: AuthCredential, firebaseAuth: FirebaseAuth) {
+    fun signInAsNewUser(credential: AuthCredential, firebaseAuth: FirebaseAuth, oldUser: String? = null) {
         Timber.d("Sign in as new user")
         firebaseAuth.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
+                if(oldUser != null && firebaseAuth.currentUser != null) {
+                    TimerMigrationService().migrate(firebaseAuth.currentUser!!.uid, oldUser)
+                }
                 didLogIn(firebaseAuth.currentUser)
             } else {
                 Toast.makeText(this, "Authentication Failed: ${task.exception.toString()}", Toast.LENGTH_SHORT).show()
@@ -129,9 +133,10 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         val id = firebaseAuth.currentUser?.uid
         authService.logout()
 
+        // remove the old user
         authService.userDbReference.child(id).removeValue { error, _ ->
             if(error == null) {
-                signInAsNewUser(credential, firebaseAuth)
+                signInAsNewUser(credential, firebaseAuth, id)
             } else {
                 throw IllegalStateException("Unable to remove the old account ${error.message}")
             }
